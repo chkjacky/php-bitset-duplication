@@ -17,6 +17,20 @@ Check your PHP installation:
 php -v
 ```
 
+## Results
+```
+Populating array with 100000000 random numbers..
+
+Checkpoint 1: Memory Usage 484696.000000 bytes
+Checkpoint 2: 1791902006.757256ms.
+Checkpoint 3: 1791902006.793761ms. Memory Usage 8877480.000000 bytes
+
+Time used: 36.504984ms
+Memory used: 8.004000 MB
+
+Match found: Y
+```
+
 ## How to Run
 
 Navigate to the directory containing `bitset-search.php`, then run:
