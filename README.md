@@ -2,6 +2,25 @@
 
 ## Overview
 
+You are not allowed to use any PHP standard library functions (e.g. array_
+XXX) for this task. 
+
+You can only use loops (while, do..while, for, foreach) and conditional
+statements (if, else if, else, switch) to solve this question.
+
+To get the code template from question.php in the same folder.
+
+There are 2 parts:
+1. Write code to populate $array with 100,000,000 random numbers.
+2. Write code to find the number $match within $array. If number is found, set
+variable $found to TRUE, else, $found should be FALSE.
+
+Your code must run < 10ms and do not consume memory > 2000 MB. Every time you run
+your code, there will be messages printed to show you your time and memory usage.
+Refer to question.php file.
+
+## Solution
+
 This project uses a **Bitset (Bit Array)** to track numbers and detect duplicates efficiently.
 
 Instead of storing every number as a separate array element, each bit represents whether a particular number has appeared. This reduces memory usage compared with storing millions of individual numbers in a conventional PHP array.
