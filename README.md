@@ -2,8 +2,7 @@
 
 ## Overview
 
-You are not allowed to use any PHP standard library functions (e.g. array_
-XXX) for this task. 
+You are not allowed to use any PHP standard library functions (e.g. array_XXX) for this task.
 
 You can only use loops (while, do..while, for, foreach) and conditional
 statements (if, else if, else, switch) to solve this question.
@@ -11,9 +10,10 @@ statements (if, else if, else, switch) to solve this question.
 To get the code template from question.php in the same folder.
 
 There are 2 parts:
+
 1. Write code to populate $array with 100,000,000 random numbers.
 2. Write code to find the number $match within $array. If number is found, set
-variable $found to TRUE, else, $found should be FALSE.
+   variable $found to TRUE, else, $found should be FALSE.
 
 Your code must run < 10ms and do not consume memory > 2000 MB. Every time you run
 your code, there will be messages printed to show you your time and memory usage.
@@ -37,6 +37,7 @@ php -v
 ```
 
 ## Results
+
 ```
 Populating array with 100000000 random numbers..
 
@@ -83,9 +84,9 @@ $mask = 1 << ($num & 31);
 Both numbers belong to `$array[1]`, because both fall within the range `32–63`.
 
 | Number | Array index | Bit position |
-|---:|---:|---:|
-| 33 | 1 | 1 |
-| 61 | 1 | 29 |
+| -----: | ----------: | -----------: |
+|     33 |           1 |            1 |
+|     61 |           1 |           29 |
 
 The corresponding bitmasks are:
 
@@ -147,12 +148,12 @@ It does not need to scan the entire collection.
 
 Let \(N\) be the number of generated inputs and \(M\) be the size of the number range.
 
-| Operation | Complexity |
-|---|---|
-| Populate the bitset | \(O(N)\) |
-| Search for one number | \(O(1)\) |
+| Operation             | Complexity                |
+| --------------------- | ------------------------- |
+| Populate the bitset   | \(O(N)\)                  |
+| Search for one number | \(O(1)\)                  |
 | Initialize the bitset | \(O(M/32)\) integer slots |
-| Bitset storage | \(O(M)\) bits |
+| Bitset storage        | \(O(M)\) bits             |
 
 For the range `0–10,000,000`, the bitset needs 10,000,001 logical bits, or approximately **1.19 MiB** of raw bit storage. The actual PHP memory usage will be higher because each integer stored in a PHP array has additional overhead.
 
